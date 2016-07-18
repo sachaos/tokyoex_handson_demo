@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :tokyoex_handson_demo, TokyoexHandsonDemo.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "",
-  database: "tokyoex_handson_demo_dev",
-  hostname: "localhost",
+  username: System.get_env("DB_USERNAME"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_DATABASE"),
+  hostname: System.get_env("DB_HOSTNAME"),
   pool_size: 10
