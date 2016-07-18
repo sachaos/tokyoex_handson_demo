@@ -53,7 +53,7 @@ defmodule TokyoexHandsonDemo.Crawler.Storage do
         Logger.debug "#{url} is arleady inserted!"
       else
         TokyoexHandsonDemo.Repo.insert!(%TokyoexHandsonDemo.Article{
-          url: url, 
+          url: url,
           title: data |> Map.get(:title),
           og_title: data |> Map.get(:og_title),
           og_image: data |> Map.get(:og_image),
@@ -63,6 +63,6 @@ defmodule TokyoexHandsonDemo.Crawler.Storage do
       end
     rescue
       _ -> Logger.debug "#{url} is rescued!"
-    end 
+    end
   end
 end
