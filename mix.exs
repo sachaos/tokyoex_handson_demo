@@ -19,7 +19,8 @@ defmodule TokyoexHandsonDemo.Mixfile do
   def application do
     [mod: {TokyoexHandsonDemo, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :mariaex]]
+                    :phoenix_ecto, :mariaex,
+                    :httpoison, :floki]]
   end
 
   # Specifies which paths to compile per environment.
